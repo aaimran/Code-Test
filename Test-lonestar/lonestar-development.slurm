@@ -21,8 +21,8 @@ mkdir -p ./log ./output-1 ./output-2 ./output-3
 #-------------------- 
 
 fnames=(
-    "test-3_xyz_raw_dom-s_pml-2km_fd-u6"
-    "test-2_xyz_raw_dom-s_pml-2km_fd-v6"
+    "test-3_xyz_raw_dom-s_pml-2km_fd-t6_res-40m_nb-2"
+    "test-5_xyz_raw_dom-s_pml-2km_fd-t6_res-40m_nb-2"
 )
 
 for fname in "${fnames[@]}"; do
