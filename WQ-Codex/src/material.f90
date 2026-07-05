@@ -1881,7 +1881,10 @@ contains
 
          call build_fq8_coefficients(parameters, M%tau_Qf8, M%strength_s_Qf8, &
               M%strength_p_Qf8, stat, message)
-         if (stat /= 0) error stop trim(message)
+         if (stat /= 0) then
+            write(*,'(A)') trim(message)
+            error stop 1
+         end if
 
          wref = 2.0_wp * pi * parameters%fref
          do i = G%C%mq, G%C%pq
