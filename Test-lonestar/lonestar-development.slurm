@@ -18,7 +18,6 @@ module load impi/19.0.9
 
 mkdir -p ./log ./output-1 ./output-2 ./output-3
 
-#-------------------- 
 
 fnames=(
     "test-3_xyz_raw_dom-s_pml-2km_fd-t6_res-40m_nb-2"
@@ -26,7 +25,7 @@ fnames=(
 )
 
 for fname in "${fnames[@]}"; do
-    mpirun -np $nprocs ./bin/./waveqlab3d ./input-3/${fname}.in | tee ./log/${fname}.log
+    ibrun ./bin/./waveqlab3d ./input-3/${fname}.in | tee ./log/${fname}.log
 done
 
 
